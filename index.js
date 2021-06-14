@@ -47,7 +47,7 @@ document.getElementById("button").onclick = function () {
       .then(function (response) {
         const data = response.data;
         console.log(data);
-        document.getElementById("people").innerHTML = (((data.main.temp)-273.15) * (9/5) + 32).toFixed(2) + " F in " + data.name; //math is conversion from kelvin to Farenheit
+        document.getElementById("people").innerHTML = (((data.main.temp)-273.15) * (9/5) + 32).toFixed(2) + " F in " + data.name + ", " + data.sys.country; //math is conversion from kelvin to Farenheit
       })
       .catch(function (err) {
         document.getElementById("people").innerHTML =

@@ -13,13 +13,6 @@ app.get("/api/users", function(req, res){
     res.status(200).send(friends); //send the array friends to the .then() in index.js
 })
 
-app.get("http://api.openweathermap.org/data/2.5/weather/", function(req, res){
-    if(req.query.q){
-    console.log(res.query.q.temp);
-    res.status(200).send(req.query.q);
-    }
-})
-
 app.get("/weather/:temp", function(req, res){
     console.log(req.params.temp);
     if(req.params.temp > 89)
